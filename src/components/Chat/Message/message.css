@@ -1,0 +1,22 @@
+.Message__block{
+    display: flex;
+}
+
+.Message{
+    word-wrap: initial;
+    min-height: 10px;
+    max-width: 80%;
+    font-size: 14px;
+    padding: 10px;
+    -webkit-box-shadow: 0px 2px 3px -1px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 2px 3px -1px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 2px 3px -1px rgba(34, 60, 80, 0.2);
+    border-radius: 8px;
+    background-color: white;
+}
+
+
+.My__message{
+    margin-left: auto;
+    background-color: rgb(75, 248, 191);
+}

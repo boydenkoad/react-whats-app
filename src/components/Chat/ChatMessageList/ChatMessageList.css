@@ -1,0 +1,16 @@
+.ChatMessageList{
+    overflow-y: auto;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: bisque;
+    height: 100%;
+    width: 100%;
+    background-image: url('../../../assets/images/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+.ChatMessageList__message{
+    margin-bottom: 10px;
+}
