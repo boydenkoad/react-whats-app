@@ -31,7 +31,10 @@ const AuthForm: FC = () => {
             <label>Api Token Instance</label> 
             <input placeholder="Api Token Instance" value={apiTokenInstance} onChange={(e)=>setApiTokenInstance(e.target.value)}/>
         </div>
-        <button className="AuthForm__btn">Submit</button>
+        <div className="AuthForm__Link">
+          <a href="https://green-api.com/" target="_blank">GREEN API / авторизация</a>
+        </div>
+        <button className="AuthForm__btn">Авторизация</button>
     </form>
   );
 };

@@ -37,13 +37,20 @@
     border: 1px solid rgb(121, 121, 121);
 }
 
+.AuthForm__Link{
+    margin-top: 20px;
+    font-size: 10px;
+}
+.AuthForm__Link a{
+    font-size: 14px;
+}
 
 
 .AuthForm__btn{
     border-radius: var(--border-radius);
     margin-top: auto;
-    width: 100px;
     height: 45px;
+    padding: 5px 10px;
     background-color: #00A884;
     letter-spacing: 0.5px;
     color: white;
