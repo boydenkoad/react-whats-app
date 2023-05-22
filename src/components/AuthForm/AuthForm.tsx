@@ -34,7 +34,7 @@ const AuthForm: FC = () => {
         <div className="AuthForm__Link">
           <a href="https://green-api.com/" target="_blank">GREEN API / авторизация</a>
         </div>
-        <button className="AuthForm__btn">Авторизация</button>
+        <button className="AuthForm__btn">Аутентификация</button>
     </form>
   );
 };
