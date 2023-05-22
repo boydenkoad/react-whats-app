@@ -10,16 +10,17 @@ interface IChatMessageList {
 }
 
 const ChatMessageList: FC<IChatMessageList> = React.memo(({ messages }) => {
-  console.log('render')
+  console.log(messages)
   const messageList = messages
-    .map((el) => (
+  
+  .map((el) => (
       <Message
         key={el.idMessage}
         classNames="ChatMessageList__message"
         message={el}
       />
     ))
-    .reverse();
+    .reverse()
   return <div className="ChatMessageList">{messageList}</div>;
 });
 export default ChatMessageList;

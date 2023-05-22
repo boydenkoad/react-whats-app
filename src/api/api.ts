@@ -16,7 +16,7 @@ export const ChatApi = {
     
     async getMessagesOfChat(idInstance:string,apiTokenInstance:string,chatId:string,count?:number){
         const result = await instance.post(`/waInstance${idInstance}/GetChatHistory/${apiTokenInstance}`,{chatId,count})
-        debugger
+        // debugger
         return result.data
     },
 

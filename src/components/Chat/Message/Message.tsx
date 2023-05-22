@@ -13,11 +13,11 @@ let authUser = "11";
 const Message: FC<{message:IMessageProps,classNames?:string}> = ({ message,classNames }) => {
   return (
     !message.textMessage ? null :
-    <div className="Message__block">
-    <p className={cn(
-        message.type === "outgoing" ? "Message My__message" : "Message",
+    <div className="Message">
+    <div className={cn(
+        message.type === "outgoing" ? "Message__text My__message" : "Message__text",
         classNames
-      )}>{message.textMessage}</p>
+      )}>{message.textMessage}</div>
     </div>
   );
 };

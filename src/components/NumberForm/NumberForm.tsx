@@ -11,27 +11,27 @@ interface INumberForm{
 
 const NumberForm: FC<INumberForm> = ({onClickHandler,onChange,value}) => {
 
-  const getChatId=(value:string = '')=>{
-      let result = []
-      for(let n of value){
-          if(
-              n === '0' ||
-              n === '1' ||
-              n === '2' ||
-              n === '3' ||
-              n === '4' ||
-              n === '5' ||
-              n === '6' ||
-              n === '7' ||
-              n === '8' ||
-              n === '9'
-          ){
-              result.push(n)
-          }
+  const validValue = (value:string,length:number)=>{
+    const result = []
+    for(let n of value){
+      if( 
+      n === '0'||
+      n === '1'||
+      n === '2'||
+      n === '3'||
+      n === '4'||
+      n === '5'||
+      n === '6'||
+      n === '7'||
+      n === '8'||
+      n === '9'
+      ){
+        result.push(n)
       }
-      return `${result.join('')}@c.us`
-  }
-  
+    }
+      return result.length === length
+    }
+
   return (
     <div className="NumberForm">
       <div className="NumberForm__container">
@@ -40,8 +40,12 @@ const NumberForm: FC<INumberForm> = ({onClickHandler,onChange,value}) => {
           className="NumberForm__input"
           value={value}
           onChange={onChange}
+          min={11}
+          
         />
-      <button onClick={onClickHandler}>Отправить</button>
+      <button onClick={
+        validValue(value,11) ? onClickHandler : ()=>{}
+      }>Отправить</button>
       </div>
       
     </div>

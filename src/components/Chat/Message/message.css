@@ -1,8 +1,8 @@
-.Message__block{
+.Message{
     display: flex;
 }
 
-.Message{
+.Message__text{
     word-wrap: initial;
     min-height: 10px;
     max-width: 80%;

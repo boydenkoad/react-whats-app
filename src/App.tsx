@@ -1,12 +1,10 @@
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import AuthPage from "./pages/AuthPage/AuthPage";
 import ChatPage from "./pages/ChatPage/ChatPage";
-import { useState } from "react";
+import MessengerPage from "./pages/MessengerPage/MessengerPage";
 
 function App() {
-  let idInstance = "1101822620";
-  let apiTokenInstance = "3786495705ac4f7abfd3ea3a0fdcf4792e935767808b45139c";
 
   return (
     <div className="App">
@@ -14,9 +12,10 @@ function App() {
       <div className="App__module-window">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<AuthPage />} />
+          <Route path="*" element={<Navigate to={'/login'}/>}/>
+          <Route path="/" element={<Navigate to={'/login'}/>}/>
           <Route path="/login" element={<AuthPage />} />
-          <Route path="/chat" element={<ChatPage />} />
+          <Route path="/messenger" element={<MessengerPage />} />
         </Routes>
       </BrowserRouter>
       </div>

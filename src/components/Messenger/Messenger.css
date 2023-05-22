@@ -1,0 +1,20 @@
+.Messenger{
+    position: relative;
+    display: flex;
+    height: 90%;
+    width: 90%;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px 5px 28px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 5px 28px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 5px 28px 0px rgba(34, 60, 80, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.Messenger__chatList{
+    width: 390px;
+}
+
+.Messenger__chat{
+    flex-grow: 1;
+}

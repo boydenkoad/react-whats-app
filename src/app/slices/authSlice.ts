@@ -1,8 +1,7 @@
 import {PayloadAction, createSlice ,Dispatch} from "@reduxjs/toolkit";
 import { AuthApi } from "../../api/api";
 
-let idInstance = '1101823204'
-let apiTokenInstance = '69667fa351af432780a74bc820885e7eb3c8e78d70144789ba'
+
 
 export interface IAuthUserData{
     idInstance:string
@@ -15,8 +14,8 @@ interface IInitialState{
 
 const initialState:IInitialState={
     user:{
-        apiTokenInstance:apiTokenInstance,
-        idInstance:idInstance
+        apiTokenInstance:localStorage.getItem('apiTokenInstance')||'',
+        idInstance:localStorage.getItem('idInstance')||''
     }
 }
 
@@ -41,13 +40,22 @@ export default authSlice.reducer
 export const setAuthUser =(user:IAuthUserData)=>(dispatch:Dispatch)=>{
     try{
         const result = AuthApi.checkAuth(user.idInstance,user.apiTokenInstance)
-        result.then(res=>console.log(res))
-        dispatch(authSlice.actions.setAuthUser(user))
+        result.then(res=>{
+
+            if(res['stateInstance'] === 'authorized'){
+                dispatch(authSlice.actions.setAuthUser(user))
+                localStorage.setItem('apiTokenInstance',user.apiTokenInstance)
+                localStorage.setItem('idInstance',user.idInstance)
+            }
+        })
+        
     }catch(e){
         console.log(e)
     }
     
 }
 export const removeAuthUser =()=>(dispatch:Dispatch)=>{
+    localStorage.removeItem('apiTokenInstance')
+    localStorage.removeItem('idInstance')
     dispatch(authSlice.actions.removeAuthUser())
 }

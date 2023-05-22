@@ -3,8 +3,8 @@
     overflow: hidden;
     height: 80px;
     width: 100%;
+    padding: 0px 10px;
     background-color: #F0F2F5;
-    border-radius: 5px;
 }
 
 .ChatFrom__text{
@@ -31,12 +31,12 @@
     width: 100px;
 }
 .ChatFrom__button button{
-    border-radius: 20px;
-    padding: 10px;
+    border-radius: 10px;
+    padding: px 10px;
     cursor: pointer;
     transition: ease-out 0.1s;
 }
 .ChatFrom__button button:hover{
-    background-color: rgb(126, 126, 126);
+    background-color: rgb(211, 211, 211);
 }
 

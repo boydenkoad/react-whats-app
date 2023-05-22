@@ -9,7 +9,7 @@ const AuthPage: FC = () => {
   const { user } = useAppSelector((state) => state.authReducer);
 
   if(user.apiTokenInstance.length && user.idInstance.length){
-    return <Navigate to={'/chat'}/>
+    return <Navigate to={'/messenger'}/>
   }
 
   return (
