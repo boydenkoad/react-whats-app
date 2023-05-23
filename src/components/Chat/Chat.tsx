@@ -20,8 +20,7 @@ const Chat: FC<IChat> = ({className,currentNumber,chatId}) => {
   const [messages, setMessages] = useState<IMassage[]>([]);
   const [textMessage,setTextMessage] = useState<string>('')
   const { user } = useAppSelector((state) => state.authReducer);
- ///ddd
-  
+
   useEffect(() => {
     if(!chatId.length) return
 
