@@ -5,7 +5,6 @@ import {IMassage} from "../../app/slices/chatSlice";
 import ChatMessageList from "./ChatMessageList/ChatMessageList";
 import ChatHeader from "./ChatHeader/ChatHeader";
 import {useAppSelector} from "../../app/store";
-import NumberForm from "../NumberForm/NumberForm";
 import cn from 'classnames'
 
 import "./Chat.css";
