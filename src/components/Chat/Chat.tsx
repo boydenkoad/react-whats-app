@@ -9,7 +9,6 @@ import NumberForm from "../NumberForm/NumberForm";
 import cn from 'classnames'
 
 import "./Chat.css";
-import { useChat } from "./hooks/useChat";
 
 interface IChat{
   chatId:string,
