@@ -7,6 +7,7 @@ import NumberForm from "../NumberForm/NumberForm";
 import { useChat } from "../Chat/hooks/useChat";
 
 const Messenger: FC = () => {
+
   const {
     chatId,
     currentNumber,
@@ -20,21 +21,22 @@ const Messenger: FC = () => {
   } = useChat();
 
 
-
-
   return (
     <div className="Messenger">
+
       <ChatList
         className="Messenger__chatList"
         chats={chatList}
         setActive={()=>onChangeSetActive(true)}
         setCurrentId={onHandleLinkChange}
       />
+
       <Chat
         className="Messenger__chat"
         chatId={chatId}
         currentNumber={currentNumber}
       />
+
       {isActive && (
         <NumberForm
           value={moduleValue}
@@ -42,6 +44,7 @@ const Messenger: FC = () => {
           onClickHandler={() => onChangeSetChadId()}
         />
       )}
+
     </div>
   );
 };

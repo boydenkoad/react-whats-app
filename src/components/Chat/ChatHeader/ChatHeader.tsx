@@ -13,10 +13,6 @@ const ChatHeader: FC<IChatHeader>=({number,update})=>{
         <div className='ChatHeader__vector'>
             <button className='' onClick={update}><img src={vector} alt="" /></button>
         </div>
-        {/* <div>
-            <button onClick={setActive}>Add</button>
-        </div> */}
-        
     </div>
 
 }

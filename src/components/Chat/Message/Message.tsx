@@ -8,8 +8,6 @@ export interface IMessageProps extends IMassage {
 
 }
 
-let authUser = "11";
-
 const Message: FC<{message:IMessageProps,classNames?:string}> = ({ message,classNames }) => {
   return (
     !message.textMessage ? null :

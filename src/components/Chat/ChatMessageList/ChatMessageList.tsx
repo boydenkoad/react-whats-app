@@ -1,4 +1,4 @@
-import React, { FC, useMemo } from "react";
+import React, { FC } from "react";
 
 import { IMassage } from "../../../app/slices/chatSlice";
 import Message from "../Message/Message";
@@ -10,9 +10,9 @@ interface IChatMessageList {
 }
 
 const ChatMessageList: FC<IChatMessageList> = React.memo(({ messages }) => {
-  console.log(messages)
-  const messageList = messages
   
+  const messageList = messages
+
   .map((el) => (
       <Message
         key={el.idMessage}
